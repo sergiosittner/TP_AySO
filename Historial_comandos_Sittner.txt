@@ -1,0 +1,441 @@
+LS
+ls}
+ls
+cat README 
+cat << EOF
+linea 1
+linea 2
+linea 3
+EOF
+
+ls
+cat << FIN > clase3.txt
+linea 1
+linea 2
+linea 3
+FIN
+
+ls
+cat clase3.txt 
+ls
+car << FIN > clase3.txt
+linea 5
+linea 6
+FIN
+
+cat << FIN > clase3.txt
+linea 5
+linea 6
+FIN
+
+cat << FIN >> clase3.txt 
+linea 7
+linea 8
+FIN
+
+ls
+cat clase3.txt 
+ls
+man bc
+bc
+bc <<<1+2
+ls
+tac clase3.txt 
+ls
+wc clase3.txt 
+echo "hola" | wc
+echo "hola"
+cat clase3.txt  | wc
+cat clase3.txt  | wc -w
+cat clase3.txt  | tail -n1
+cat clase3.txt  | grep 6
+cd
+ls
+cd/
+cd / 
+ls
+cd proc/
+cat cpuinfo 
+grep -i proce
+cd/
+cd /
+ls
+cd proc/
+ls
+cat tmp
+cat cpuinfo 
+grep -i core cpuinfo 
+cd
+ls
+mkdir clases
+ls
+ls -l
+mv clase3.txt  clases
+ls
+cd clases /
+cd clases/
+ls
+cat clase3.txt
+mv clase3.txt clase4.txt
+ls
+cat clase4.txt 
+ls
+cp clase4.txt ..
+ls
+cd ..
+ls
+cat clase4.txt 
+ls
+pwd
+ls
+rm clase4.txt 
+ls
+mkdir clases2
+ls
+rm -r clases2
+ls
+mkdir clases2
+ls
+rm -r clases2
+ls
+cd
+ls
+cd /
+ls
+cd var
+ls
+cd log
+ls
+tail f dmesg 
+sudo tail -f dmesg
+man journalctl 
+ls
+journalctl
+ls
+cp -r clases carpeta_compartida
+ls
+cd capeta_compartida
+ls
+pwd
+cd clases
+vim clase3.txt
+ls
+cat clase4.txt 
+vim clase3.txt
+ls
+vim clase3.txt
+ls
+vim clase.txt
+ls
+cat clase
+cat clase.txt
+rm clase.txt
+ls
+exit
+sudo snap install tree
+exit
+pwd
+ls
+cd repogit
+cd ..
+tree.
+tree .
+pwd
+exit
+man passwd
+ls
+cd repogit/
+ls
+cd ..
+ls
+cd
+ls
+pwd
+sudo cat /etc/shadow
+sudo cat passwd
+sudo car /etc/passwd
+sudo cat /etc/passwd
+pwd
+man chmod
+ls -l
+ls -la ~/.ssh/
+cat ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+cd ~/repogit
+git clone git@github.com:tu_usuario/TP_AySO.git
+cd TP_AySO
+# Si ya clonaste con HTTPS, cambia el remote:
+git remote set-url origin git@github.com:tu_usuario/TP_AySO.git
+cd ~/repogit
+git clone git@github.com:sergiosittner/TP_AySO.git
+cd TP_AySO
+git config --global user.email "sergiosittner@gmail.com"
+git config --global user.name "Sergio Sittner"
+pwd
+ls -la
+git push-u origin main
+git push -u origin main
+pwd
+cat /etc/mtab
+grep SYSFS /etc/mtab 
+echo "Usuario=$(whoami)" > datos_usuario.txt
+git add .
+git config --global user.email "sergiosittner05@gmail.com" 
+git config --global user.name "sergiosittner"
+git config --global user.email "sergiosittner05@gmail.com" 
+git config --global user.name "sergiosittner"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt" 
+git status
+git push
+cd ~/repogit/TP_AySO
+pwd
+cat /etc/mtab
+grep -i Sysfs /etc/mtab
+grep -i Sysfs /etc/mtab > datos_sys.txt
+cat datos_sys.txt
+ls -l
+pwd
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+cat datos_usuario.txt
+ls -l
+git status
+git add .
+git status
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git push
+git status
+cat datos_usuario.txt
+grep "$(whoami)" /etc/passwd
+grep "$(whoami)" /etc/passwd | awk -F: '{print $5 " " $6}'
+grep "$(whoami)" /etc/passwd | awk -F: '{print $5 " " $6}' >> datos_usuario.txt
+cat datos_usuario.txt
+git add datos_usuario.txt
+git commit -m "feat: Añadiendo información del Usuario"
+git push
+git status
+cat README.md
+cat > README.md << EOF
+Alumno: [Sergio]
+División: [Sittner]
+Turno: [Mañana]
+EOF
+
+cat README.md
+git add README.md
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+git status
+pwd
+mkdir -p TP1/{arquitectura/{Clase1,Clase2,Clase3,Clase4,Clase5},so/{Clase1,Clase2,Clase3,Clase4,Clase5,Clase6}}
+ls -la TP1/
+find TP1 -type d
+tree TP1/
+cat > script_dir.sh << 'EOF'
+#!/bin/bash
+mkdir -p TP1/{arquitectura/{Clase1,Clase2,Clase3,Clase4,Clase5},so/{Clase1,Clase2,Clase3,Clase4,Clase5,Clase6}}
+EOF
+
+cat script_dir.sh
+#!/bin/bash
+mkdir -p TP1/{arquitectura/{Clase1,Clase2,Clase3,Clase4,Clase5},so/{Clase1,Clase2,Clase3,Clase4,Clase5,Clase6}}
+chmod +x script_dir.sh
+ls -l script_dir.sh
+# Primero borramos la carpeta TP1 para probar
+rm -rf TP1
+# Ejecutamos el script
+./script_dir.sh
+# Verificamos que recreó la estructura
+ls -la TP1/
+rm -rf TP1
+./script_dir.sh
+ls -la TP1/
+git add .
+git commit -m "a"
+git push
+git status
+git log --oneline
+git reset --hard m1n2o3p
+git push --force
+git log --oneline
+git reset --hard a1b2c3d
+git push --force
+cd
+cd repogit
+git clone git@github.com:sergiosittner/TP_AySO.git
+cd TP_AySO
+cd..
+cd ..
+pwd
+ls
+cd tp_ayso
+cd ~/repogit/TP_AySO
+ls -la
+git remote add origin git@github.com:tu_usuario/TP_AySO.git
+git remote -v
+git push -u origin main
+git push --force origin main
+git reset --soft $(git rev-list --max-parents=0 HEAD)
+git add datos_sys.txt
+git commit -m "1"
+git add datos_usuario.txt
+git commit -m "2"
+git add datos_usuario.txt
+git commit -m "3"
+git add README.md
+git commit -m "4"
+git add TP1/
+git commit -m "5"
+git add script_dir.sh
+git commit -m "6"
+git push --force origin main
+git log --oneline
+cat > README.md << EOF
+Alumno: Sergio Sittner
+División: 116
+Turno: Mañana
+EOF
+
+git add README.md
+git commit -m "1"
+git push
+man history
+history -a
+history -a 
+cp ~/.bash_history ./Historial_comandos_Apellido.txt 
+git add . 
+git commit -m "ADD: Historial de comandos de Apellido" 
+git push 
+history
+cd
+git clone git@github.com:sergiosittner/TP_AySO.git
+cd TP_AySO/
+ls-l
+ls -l
+cat /etc/mtab
+man grep
+grep SYSFS /etc/mtab
+whoami
+echo "Usuario=$(whoami) > datos_usuario.txt
+
+
+
+
+
+echo
+exit
+qq
+exit
+"
+man grep
+grep SYSFS /etc/mtab
+grep home_url /etc/os-release
+grep home_url/etc/os-release
+cat /etc/mtab
+grep SYSFS /etc/mtab
+grep SYSFS/etc/mtab
+grep SYSFS /etc/mtab
+grep -i SYSFS /etc/mtab
+grep -i SYSFS /etc/mtab > datos_sys.txt
+whoami
+echo “Usuario=$(whoami)” > datos_usuario.txt 
+git add.
+git add .
+git config --global user.email "sergiosittner05@gmail.com"
+git config --global user.name "sergiosittner"
+git config --global user.name sergiosittner
+git config --global user.email sergiosittner05@gmail.com
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+cd /etc/passwd
+cd etc/passwd
+cd
+pwd
+ls
+cd repogit/
+ls
+cd
+cd snap/
+ls
+cd
+cat /etc/passwd
+cat /etc/passwd | grep -i vagrant
+grep "^vagrant:" /etc/passwd | awk -F: '{print $5 "," $6}' >> datos_usuario.txt
+cat >> README.md << fin
+Alumno: Sergio
+División: 116
+Turno: Mañana
+fin
+
+git add README.md datos_usuarios.txt
+git add README.md
+git add datos_usuario.txt 
+git init
+git config --global user.name "sergiosittner"
+git config --global user.email "sergiosittner05@gmail.com"
+git add README.md datos_usuario.txt
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+git remote add origin git@github.com:sergiosittner/TP_AySO.git
+git push
+git push -u origin master
+git status
+git push
+cd
+pwd
+mkdir -p TP1/{arquitectura/{Clase1,Clase2,Clase3,Clase4,Clase5},so{Clase1,Clase2,Clase3,Clase4,Clase5,Clase6}}
+cd
+pwd
+la
+ls
+cd tp1
+cd TP1
+ls
+cd
+rm -- TP1
+rm -r TP1
+ls
+mkdir -p TP1/{arquitectura/{Clase1,Clase2,Clase3,Clase4,Clase5},so/{Clase1,Clase2,Clase3,Clase4,Clase5,Clase6}}
+ls
+cd TP1
+ls
+cd arquitectura/
+ls
+cd ..
+ls
+cd
+nano script_dir.sh
+ls
+rm -r TP1
+ls
+chmod +x script_dir.sh 
+./script_dir.sh 
+ls
+cd TP1
+LS
+ls
+cd arquitectura/
+ls
+cd ..
+ls
+cd so
+ls
+cd
+git add .
+git add.
+git commit -m "ADD: Añadiendo script"
+git reset --soft HEAD~1
+git status
+git reset --hard HEAD~1
+git status
+git reset HEAD
+git status
+cd
+ls
+git add script_dir.sh 
+git commit -m "ADD: Añadiendo script"
+git push
+git status
+history -a
+ls
